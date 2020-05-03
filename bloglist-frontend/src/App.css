@@ -1,0 +1,36 @@
+.blog-wrapper {
+  border: 3px solid black;
+  margin: 3px;
+  width: calc(200px + 20vw);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.blog-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.error {
+  align-items: center;
+  background: lightgray;
+  border: 3px red solid;
+  border-radius: 0.5vmin;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 1vmin);
+  margin: 2vmin;
+  padding: 1vmin;
+  width: 20vw;
+}
