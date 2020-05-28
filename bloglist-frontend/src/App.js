@@ -15,9 +15,6 @@ import { checkLogin } from './reducers/loginReducer'
 import { initializeUsers } from './reducers/userReducer'
 import './App.css'
 
-//TODO: Commented out hook code in bloglist frontend hooks/index.js
-//TODO: hooks folder in country-hook?
-
 const App = () => {
   const dispatch = useDispatch()
   const loggedUser = useSelector(state => state.loggedUser)
