@@ -22,7 +22,6 @@ const useCountry = (name) => {
       axios
         .get(`https://restcountries.eu/rest/v2/name/${name}?fullText=true`)
         .then(response => {
-          console.log(response)
           if(response.status === 200) {
             setCountry({
               data: response.data[0],
