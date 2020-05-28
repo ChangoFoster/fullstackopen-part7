@@ -99,7 +99,10 @@ const Blog = ({ blog }) => {
           Name: {blog.user.name}
         </Typography>
         <Typography component="h5" variant="h6">
-          Comments: {blog.comments.map((comment, idx) => <li key={idx}>{comment}</li>)}
+          Comments:
+          {blog.comments.map((comment, idx) => 
+            <li key={idx}>{comment}</li>
+          )}
         </Typography>
       </CardContent>
       <CardActions>

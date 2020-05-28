@@ -14,30 +14,40 @@ const User = ({ user }) => {
         <Typography component="h2" variant="h5">
           {`No blogs by ${user.name} yet`}
         </Typography>
-        <Button color="default" component={Link} to="/users" variant="contained">
-          Back
-        </Button>
-      </div>
-    )
-  } else {
-    return(
-      <div>
-        <Typography component="h2" variant="h5">
-          {`${user.name}'s blogs`}
-        </Typography>
-        <ul>
-          {user.blogs.map(({id, title}) =>
-            <ListItem key={id} component={Link} to={`/blogs/${id}`}>
-              <ListItemText primary={title} />
-            </ListItem>
-          )}
-        </ul>
-        <Button color="default" component={Link} to="/users" variant="contained">
+        <Button
+          color="default"
+          component={Link}
+          to="/users"
+          variant="contained"
+        >
           Back
         </Button>
       </div>
     )
   }
+
+  return(
+    <div>
+      <Typography component="h2" variant="h5">
+        {`${user.name}'s blogs`}
+      </Typography>
+      <ul>
+        {user.blogs.map(({id, title}) =>
+          <ListItem key={id} component={Link} to={`/blogs/${id}`}>
+            <ListItemText primary={title} />
+          </ListItem>
+        )}
+      </ul>
+      <Button
+        color="default"
+        component={Link}
+        to="/users"
+        variant="contained"
+      >
+        Back
+      </Button>
+    </div>
+  )
 }
 
 export default User

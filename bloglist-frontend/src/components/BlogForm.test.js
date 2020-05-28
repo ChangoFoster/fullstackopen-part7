@@ -5,7 +5,6 @@ import { render, fireEvent } from '@testing-library/react'
 import BlogForm from './BlogForm'
 
 describe('<BlogForm/>', () => {
-
   const createBlog = jest.fn()
   let component
 

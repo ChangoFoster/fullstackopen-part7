@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { ListItem, ListItemText, Typography } from '@material-ui/core'
 
 const Blogs = ({ blogs }) => {
-
   return(
     <div>
       <Typography component="h2" variant="h5">List of blogs</Typography>

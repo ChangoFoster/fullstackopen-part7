@@ -26,7 +26,9 @@ const Users = ({ users }) => {
 
   return(
     <div className={classes.root}>
-      <Typography component="h2" variant="h5">List of blogs per user</Typography>
+      <Typography component="h2" variant="h5">
+        List of blogs per user
+      </Typography>
       <TableContainer component={Paper}>
       <Table>
         <TableHead>
@@ -38,7 +40,9 @@ const Users = ({ users }) => {
         <TableBody>
           {users.map(({id, name, blogs}) =>
             <TableRow key={id}>
-              <TableCell><Link to={`/users/${id}`}>{name}</Link></TableCell>
+              <TableCell>
+                <Link to={`/users/${id}`}>{name}</Link>
+              </TableCell>
               <TableCell>{blogs.length}</TableCell>
             </TableRow>
           )}

@@ -5,13 +5,15 @@ import { Alert } from '@material-ui/lab'
 const Notification = () => {
   const message = useSelector(state => state.notification.message)
 
-  const alert = () => (<Alert severity={message.type}>{message.text}</Alert>)
-
   if(message === null) {
     return null
-  } else {
-    return <div>{message && alert()}</div>
   }
+
+  return (
+    <div>
+      {message && <Alert severity={message.type}>{message.text}</Alert>}
+    </div>
+  )
 }
 
 export default Notification

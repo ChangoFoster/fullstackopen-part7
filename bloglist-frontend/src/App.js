@@ -15,13 +15,15 @@ import { checkLogin } from './reducers/loginReducer'
 import { initializeUsers } from './reducers/userReducer'
 import './App.css'
 
-//TODO: Copy across part4 backend?
+//TODO: Commented out hook code in bloglist frontend hooks/index.js
+//TODO: hooks folder in country-hook?
 
 const App = () => {
   const dispatch = useDispatch()
   const loggedUser = useSelector(state => state.loggedUser)
 
-  const blogs = useSelector(state => state.blogs.sort((prev, curr) => curr.likes - prev.likes))
+  const blogs = useSelector(state => state.blogs
+    .sort((prev, curr) => curr.likes - prev.likes))
   const blogMatch = useRouteMatch('/blogs/:id')
   const blog = blogMatch ?
     blogs.find(blog => blog.id === blogMatch.params.id) : null
@@ -33,13 +35,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(initializeBlogs())
-  }, [dispatch])
-
-  useEffect(() => {
     dispatch(checkLogin())
-  }, [dispatch])
-
-  useEffect(() => {
     dispatch(initializeUsers())
   }, [dispatch])
 
